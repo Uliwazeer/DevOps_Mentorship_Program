@@ -1,8 +1,8 @@
-##DevOps Engineer Learning Path by KodeKloud
+##DevOps Engineer Learning Path by KodeKloud (350 Hour With 17 Course)
 Welcome to the DevOps Engineer Learning Path provided by KodeKloud! This comprehensive guide is designed to equip you with essential skills and knowledge to excel in the field of DevOps. Below is a structured roadmap to help you navigate through various topics and advance your career.
 
 Table of Contents
-##12-Factor App Principles
+##1-12-Factor App Principles
 
 Codebase
 Dependencies
