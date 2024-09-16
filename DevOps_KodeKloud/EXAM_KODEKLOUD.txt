@@ -1,0 +1,240 @@
+Next
+
+9 / 9
+Now jump host is able to access all four apps. But if you try to ping app03 or app04 from app01 or app02 or vice versa you will see ping is not working. So now we want to use jump host as a router so that app01 and app02 can access app03 and app04 and vice versa, lets add some routing table entries on these hosts to make it work.
+
+
+a. Add a routing table entry in app01 and app02 hosts so that these hosts can reach app03 and app04 hosts via jump host.
+
+b. Add a routing table entry in app03 and app04 hosts so that these hosts can reach app01 and app02 hosts via jump host.
+
+c. Now try to ping app03 and app04 from app01 and app02 and vice versa, every app should be able to ping each other.
+*********************************************************************
+On host01, point www.google.com to 127.0.0.1 IP address locally.
+*********************************************************************
+On host01, add Google public DNS i.e 8.8.8.8 as a nameserver.
+**********************************************************************
+On host01 we want to resolve name news to news.yahoo.com automatically without hard coding its entry in /etc/hosts file. Add the required changes on host01.
+************************************************************************
+Help us install Java 20 inside the /opt directory on the app01 server. Use the bob user and the password caleston123 to log in to the app01 server.
+***********************************************************************
+We need to set java binary path in environment PATH variable to use java binaries. So that you can simply run java instead of the full path.
+
+Once done, verify that you can invoke java simply by running java command.
+************************************************************************
+We have created MyClass.java file inside /opt/app directory. View it if you like using the command cat MyClass.java. Please compile it.
+************************************************************************
+Generate documentation for the MyClass.java source code into the /opt/app/doc directory.
+************************************************************************
+Install NodeJS file package with npm inside /home/thor/ director
+************************************************************************
+Install file module globally with npm.
+************************************************************************
+Download nodejs application from github in /home/thor/ on host01 server?
+
+
+Git repo URL for nodejs : https://github.com/contentful/the-example-app.nodejs
+*************************************************************************
+Install python3.8 in host01 server
+
+
+We removed python3. You can confirm by running python3 -V
+***************************************************************************
+Add the index.html file to the git repo so it's changes are tracked. And then commit the changes. Use any message while committing.
+***************************************************************************
+On host01 clone a git repository https://github.com/kodekloudhub/webapp-color.git in thor user's home directory.
+
+
+The git repository should be available at /home/thor/webapp-color
+***************************************************************************
+Remote repositories need not always be on remote servers. They can be located on the same server too. We have a remote repository on host01 at path /opt/remoterepo.git. Clone it to thor user's home directory.
+
+
+The git repository should be available at /home/thor/remoterepo
+***************************************************************************
+In your cloned repository i.e /home/thor/remoterepo create a file index.html with content This is a sample file. Track the new file, commit the changes and finally push the same to remote repo in master branch.
+***************************************************************************
+Install apache and start httpd process
+***************************************************************************
+Please check default apache content by clicking tab called Apache on the top right of the terminal.
+
+Apache is listening on port 80 by default
+***************************************************************************
+We have added dummy html files and some dependent images to /opt/food directory.Make sure that this content is available on apache page
+***************************************************************************
+Install the latest version of tomcat 11 on host01 server under /opt/ directory.
+Please move extracted package to /opt/apache-tomcat-11 to keep just major version for simplicity.
+
+
+To download the latest version of tomcat 11. Click on the Tomcat tab. It's available at the top right.
+******************************************************************************
+Now run tomcat with default settings.
+
+
+Open the localhost tab to see the tomcat web page in web browser.
+********************************************************************************
+Now change tomcat port from 8081 to 9090.
+
+
+Open the localhost tab to see the tomcat web page in web browser.
+************************************************************************************
+Run apache tomcat on all IP interfaces and port 9090 on host01 server.
+
+
+We already downloaded apache tomcat under /opt/apache-tomcat-8.5.53 directory. Modify necessary files and start tomcat.
+**************************************************************************************
+In app01 server ensure that our app in /opt/simple-webapp-flask/ run on port 5000 and listen to 127.0.0.1 IP.
+
+Run python app in background with nohup.
+
+
+Note:- Nohup stands for no hang up, which can be executed as shown below:-
+
+nohup command-with-options &
+
+Adding & at the end will move the process to run in background. When you execute a Unix job in the background (using &) and logout from the session, your process will get killed. You can avoid this with nohup.
+********************************************************************************************
+Enable Flask app to be reachable from host01 and confirm by browser tab.
+
+
+To make app reachable from outside we have to bind app to global IP that will be used to access it or simply listen on all interfaces. In this case please make Flask app listen on all IP interfaces
+
+Note: - Make use of the SSH command to login in app01 server from the thor user of host01 server. It's a passwordless setup.
+*********************************************************************************************
+We added app01 IP address 172.16.239.30 to flask application but seems curl app01:5000 not working on host01 server. Please fix the issue so that curl app01:5000 works as well as curl 172.16.239.30:5000 works on host01 server.
+
+
+Note: - Make use of the SSH command to login in app01 server from the thor user of host01 server. It's a passwordless setup.
+********************************************************************************************
+Install MySQL server package on app01 using yum.
+
+
+You can either install Mysql or MariaDB both should work.
+
+SSH into app01 from host01 using command:-
+
+thor@host01~$ ssh app01
+********************************************************************************************
+On app01 start MySQL/MariaDB service on default port.
+**********************************************
+If you have installed MySQL Server then you can find out MySQL root user password using command sudo grep 'temporary password' /var/log/mysqld.log But if you have installed MariaDB server you might have noticed that there is no password set for MySQL root user.
+
+
+a. If you have installed MariaDB server then set password P@ssw0rd123 for root user.
+
+b. If you have installed MySQL server then change root user password to P@ssw0rd123.
+******************************************
+Create a MySQL user kk_user and set its password to S3cure#3214
+*****************************
+Now we already have a database kk_db and a user kk_user. Grant full access on kk_db database to kk_user user.
+**********************************
+Install MongoDB Community Edition on app01.
+
+
+SSH into app01 from host01 using command ssh app01
+*************************************
+On app01 start MongoDB service.
+
+
+SSH into app01 from host01 using command ssh app0
+**************************************
+On jump host server which is thor@host01 create an SSH public/private key-pair with name mykey at path /home/thor/.ssh/ (mykey and mykey.pub) for user thor.
+**************************************
+Using the mykey SSH key-pair you created in previous question configure passwordless SSH connection between jump host and app01 for user thor. (thor user should already be there on both servers).
+
+
+Note: There might be passwordless SSH connection between jump host and app01 for user thor but through default SSH keys, make sure to configure the same using the SSH key pair you created.
+*******************************************
+On app01 create a CSR (certificate signing request) /etc/httpd/csr/app01.csr (key name should be app01.key). Below are the required details which should be used while creating CSR.
+
+
+a. Country Name = SG
+
+b. State or Province Name = Capital Tower
+
+c. Locality Name = CT
+
+d. Organization Name = KodeKloud
+
+e. Organizational Unit Name = Education
+
+f. Common Name = app01.com
+
+g. Email Address = admin@kodekloud.com
+
+h. Keep challenge password blank.
+
+i. Keep optional company name blank.
+*******************************************************************
+There is a yaml file named practice.yaml under /home/bob/playbooks/ directory with a key property1 and value value1.
+
+
+Add an additional key named property2 and value value2.
+**************************************************
+We have updated the /home/bob/playbooks/practice.yaml file with the key name and value apple. Add some additional properties (given below) to the dictionary.
+
+
+name= apple
+color= red
+weight= 90g
+************************************************
+Let us now setup the complete app - both web and database - on a single server. Install mariadb and start the process with default conf. Ensure that process is started on server reboot.
+**************************************************
+Let us get some more practice. Let's try to do the same, but in a distributed setup. We will install database on db server, and website on web server. Install mariadb and start the process with default conf. Ensure that process is started on server reboot.
+
+
+target server: db
+***************************************************
+Change the SHELL for Bob from bash to Bourne Shell
+
+
+Bob's password is caleston123
+
+Note: - Normal users can not execute the high-level tasks so add sudo before the command.
+***************************************************
+Create a new environment variable called PROJECT=MERCURY and make it persistent by adding the variable to the ~/.profile file.
+***************************************************
+Update Bob's prompt so that it displays the date as per the format below:
+
+
+Example: [Wed Apr 22]bob@caleston-lp10:~$
+Make sure the change is made persistent.
+***************************************************************
+This lab requires some commands to be run as the root user. Always use sudo.
+
+Bob's default password is caleston123
+*****************************************
+
+
+Some important certification details are listed below:
+
+You will have 1.5 hours to complete the exam.
+The certification is valid for 3 years.
+This exam is online, proctored with multiple-choice questions.
+One retake is available for this exam.
+Important links:
+
+Prometheus Certified Associate(PCA) registration link: https://training.linuxfoundation.org/certification/prometheus-certified-associate/
+Exam curriculum: https://github.com/cncf/curriculum/blob/master/PCA_Curriculum.pdf
+Certification FAQs: https://docs.linuxfoundation.org/tc-docs/certification/frequently-asked-questions-pca
+Candidate Handbook: https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2
+To ensure your system meets the exam requirements, visit this link: https://syscheck.bridge.psiexams.com/
+Important exams instructions to check before scheduling the exam: https://docs.linuxfoundation.org/tc-docs/certification/important-instructions-pca
+************************************************************************
+
+Some important certification details are listed below:
+
+​You will have 1.5 hours to complete the exam.​
+The certification is valid for 3 years.​
+This exam is online, proctored with multiple-choice questions.
+One retake is available for this exam.
+Important links:
+
+Prometheus Certified Associate(PCA) registration link: https://training.linuxfoundation.org/certification/prometheus-certified-associate/
+Exam curriculum: https://github.com/cncf/curriculum/blob/master/PCA_Curriculum.pdf
+​Certification FAQs: https://docs.linuxfoundation.org/tc-docs/certification/frequently-asked-questions-pca
+Candidate Handbook: https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2
+​To ensure your system meets the exam requirements, visit this link: https://syscheck.bridge.psiexams.com/
+Important exams instructions to check before scheduling the exam: https://docs.linuxfoundation.org/tc-docs/certification/important-instructions-pca
+Head over to this link to enroll in the Certification Exam. Remember to keep the code – 20KODE – handy to get a 20% discount while registering for the PCA exam with Linux Foundation.
+*****************************************************************
